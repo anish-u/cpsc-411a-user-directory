@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface UserDao {
 
     // Single source of truth: UI listens to this
-    @Query("SELECT * FROM users ORDER BY name ASC")
+    @Query("SELECT * FROM users")
     fun getUsersFlow(): Flow<List<UserEntity>>
 
     // Search by name or email (case-insensitive)
